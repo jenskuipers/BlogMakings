@@ -5,29 +5,37 @@ BlogMakings is a Laravel blog project.
 ## Prerequisites
 
 - Composer
-- Mysql
-- Webserver (with php7.4)
+- Webserver with MySQL and PHP 7.4 (optional)
 
 ## Installation
 
 **1) Clone this repository**
 
-**2) Run the following commands in the project root folder**
+**2) Run the following commands in the project root folder (according to your needs)**
 
-    cp .env.example .env #Add a mysql database to this file
+Or if you want to use a webserver (and mysql and php):
+
+    cp .env.example .env
     composer install
     php artisan key:generate
     php artisan migrate --seed
+    
+If you want to use php artisan serve:
 
-**3) Restart webserver**
+    # create a database and a database user with all permissions to this database
+    cp .env.testing.example .env.testing
+    composer install
+    php artisan --env=testing key:generate
+    php artisan --env=testing migrate --seed
+    php artisan --env=testing serve
+
+**3) Restart webserver (optional if you went with php artisan serve)**
     
 
 ## Usage
 
-- Go to:        http://127.0.0.1:8000/
 - Admin login:  admin@blogmakings.local		admin
 - Author login:	author@blogmakings.local	author
-
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

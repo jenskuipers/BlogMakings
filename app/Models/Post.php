@@ -27,7 +27,7 @@ class Post extends Model
      */
     public $sortable = [
         'title',
-        'updated_at'
+        'created_at'
     ];
 
     /**

@@ -24,7 +24,8 @@ class CommentFactory extends Factory
         return [
             'content' => $this->faker->realText($this->faker->numberBetween(10, 255)),
             'user_id' => $this->faker->numberBetween(1, 5),
-            'post_id' => $this->faker->numberBetween(1,50)
+            'post_id' => $this->faker->numberBetween(1,50),
+            'created_at' => $this->faker->dateTimeBetween()
         ];
     }
 }

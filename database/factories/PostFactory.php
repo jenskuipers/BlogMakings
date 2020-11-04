@@ -25,7 +25,8 @@ class PostFactory extends Factory
             'title' => $this->faker->sentence(5, true),
             'content' => $this->faker->realText($this->faker->numberBetween(200, 500)),
             'user_id' => $this->faker->numberBetween(1, 5),
-            'category_id' => $this->faker->numberBetween(1,10)
+            'category_id' => $this->faker->numberBetween(1,10),
+            'created_at' => $this->faker->dateTimeBetween()
         ];
     }
 }
