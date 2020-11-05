@@ -22,7 +22,7 @@ If you want to use a webserver:
     
 Restart webserver 
 
-**OR*
+**OR**
     
 If you want to use php artisan serve:
 
