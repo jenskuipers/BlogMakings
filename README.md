@@ -15,6 +15,7 @@ BlogMakings is a Laravel blog project for self-education purposes.
 
 If you want to use a webserver:
 
+    # create a database and a database user with all permissions to this database
     cp .env.example .env
     composer install
     php artisan key:generate
@@ -26,7 +27,6 @@ Restart webserver
     
 If you want to use php artisan serve:
 
-    # create a database and a database user with all permissions to this database
     cp .env.testing.example .env.testing
     composer install
     php artisan --env=testing key:generate
