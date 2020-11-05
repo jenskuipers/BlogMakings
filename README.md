@@ -1,6 +1,6 @@
 # BlogMakings
 
-BlogMakings is a Laravel blog project.
+BlogMakings is a Laravel blog project for self-education purposes.
 
 ## Prerequisites
 
