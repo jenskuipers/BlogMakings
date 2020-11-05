@@ -30,6 +30,7 @@ class UserFactory extends Factory
             'password' => Hash::make('password'),
             'role' => 'author',
             'remember_token' => Str::random(10),
+            'created_at' => $this->faker->dateTimeBetween()
         ];
     }
 }
