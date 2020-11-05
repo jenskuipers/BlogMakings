@@ -13,12 +13,16 @@ BlogMakings is a Laravel blog project.
 
 **2) Run the following commands in the project root folder (according to your needs)**
 
-Or if you want to use a webserver (and mysql and php):
+If you want to use a webserver:
 
     cp .env.example .env
     composer install
     php artisan key:generate
     php artisan migrate --seed
+    
+Restart webserver 
+
+**OR*
     
 If you want to use php artisan serve:
 
@@ -28,8 +32,6 @@ If you want to use php artisan serve:
     php artisan --env=testing key:generate
     php artisan --env=testing migrate --seed
     php artisan --env=testing serve
-
-**3) Restart webserver (optional if you went with php artisan serve)**
     
 
 ## Usage
