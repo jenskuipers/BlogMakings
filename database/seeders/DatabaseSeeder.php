@@ -18,21 +18,30 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User::factory(5)->create();
-        Category::factory(10)->create();
-        Post::factory(50)->create();
-        Comment::factory(200)->create();
         User::create([
-            'name' => 'Administrator',
+            'name' => 'Test Administrator',
             'email' => 'admin@blogmakings.local',
             'role' => 'admin',
             'password' => Hash::make('admin')
         ]);
+<<<<<<< Updated upstream
 	    User::create([
             'name' => 'Author',
             'email' => 'athor@blogmakings.local',
+=======
+        
+        User::create([
+            'name' => 'Test Author',
+            'email' => 'author@blogmakings.local',
+>>>>>>> Stashed changes
             'role' => 'author',
             'password' => Hash::make('author')
         ]);
+
+        // Order of factories does matter
+        User::factory(5)->create();
+        Category::factory(10)->create();
+        Post::factory(50)->create();
+        Comment::factory(200)->create();
     }
 }
