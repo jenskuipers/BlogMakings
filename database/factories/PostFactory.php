@@ -2,7 +2,9 @@
 
 namespace Database\Factories;
 
+use App\Models\Category;
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PostFactory extends Factory
@@ -24,8 +26,8 @@ class PostFactory extends Factory
         return [
             'title' => $this->faker->sentence(5, true),
             'content' => $this->faker->realText($this->faker->numberBetween(200, 500)),
-            'user_id' => $this->faker->numberBetween(1, 5),
-            'category_id' => $this->faker->numberBetween(1,10),
+            'user_id' => User::where('role', '=', 'author')->get()->random()->id,
+            'category_id' => Category::all()->random()->id,
             'created_at' => $this->faker->dateTimeBetween()
         ];
     }
