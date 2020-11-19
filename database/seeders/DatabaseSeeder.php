@@ -24,16 +24,10 @@ class DatabaseSeeder extends Seeder
             'role' => 'admin',
             'password' => Hash::make('admin')
         ]);
-<<<<<<< Updated upstream
-	    User::create([
-            'name' => 'Author',
-            'email' => 'athor@blogmakings.local',
-=======
-        
+
         User::create([
             'name' => 'Test Author',
             'email' => 'author@blogmakings.local',
->>>>>>> Stashed changes
             'role' => 'author',
             'password' => Hash::make('author')
         ]);
