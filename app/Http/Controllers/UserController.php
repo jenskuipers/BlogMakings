@@ -34,7 +34,7 @@ class UserController extends Controller
     {
         $users = $this->userRepository->getAll();
 
-        return View::make('user.index', compact('users'));
+        return view('user.index', compact('users'));
     }
 
     /**
@@ -44,7 +44,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        return View::make('user.create');
+        return view('user.create');
     }
 
     /**
@@ -71,7 +71,7 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        return View::make('user.show', compact('user'));
+        return view('user.show', compact('user'));
     }
 
     /**
@@ -82,7 +82,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return View::make('user.edit', compact('user'));
+        return view('user.edit', compact('user'));
     }
 
     /**

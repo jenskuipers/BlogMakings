@@ -6,9 +6,9 @@
         <div class="d-flex justify-content-between">
             <h3>{{ __('Profile') }}</h3>
             
-            @if(Auth::user() && Auth::user()->can('update', $user))
+            @if(auth()->user() && auth()->user()->can('update', $user))
             <a class="btn btn-secondary" href="{{ route('user.edit', $user) }}">{{ __('Edit') }}</a>
-            @elseif(Auth::user() && Auth::user()->role == 'admin')
+            @elseif(auth()->user() && auth()->user()->role == 'admin')
             <form method="post" action="{{ route('user.destroy', $user) }}">
                 @csrf
                 @method('delete')

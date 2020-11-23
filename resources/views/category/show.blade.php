@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-between">
             <h3>{{ $category->name }}</h3>
 
-            @if(Auth::user() && (Auth::user()->role == 'admin'))
+            @if(auth()->user() && (auth()->user()->role == 'admin'))
                 <form method="post" action="{{ route('category.destroy', $category) }}">
                     @csrf
                     @method('delete')

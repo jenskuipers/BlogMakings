@@ -6,8 +6,8 @@
             <div class="d-flex justify-content-between">
                 <h3 class="font-weight-bolder">{{ $post->title }}</h3>
         
-                @if((Auth::user() && Auth::user()->role == 'admin') ||
-                    Auth::user() && Auth::user()->can('update', $post))
+                @if((auth()->user() && auth()->user()->role == 'admin') ||
+                    auth()->user() && auth()->user()->can('update', $post))
                     <form method="post" action="{{ route('post.destroy', $post) }}">
                         @csrf
                         @method('delete')
@@ -59,8 +59,8 @@
                         <li class="list-group-item font-weight-bold">{{ $comment->user->name }}</li>
                         <li class="list-group-item">{{ $comment->content }}</li>
                     </ul>
-                    @if((Auth::user() && Auth::user()->role == 'admin') ||
-                        Auth::user() && Auth::user()->can('update', $comment))
+                    @if((auth()->user() && auth()->user()->role == 'admin') ||
+                        auth()->user() && auth()->user()->can('update', $comment))
                         <form class="col-md-2" method="post" action="{{ route('comment.destroy', $comment) }}">
                             @csrf
                             @method('delete')

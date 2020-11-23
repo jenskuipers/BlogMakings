@@ -6,7 +6,7 @@
         <div class="d-flex justify-content-between">
             <h3>{{ __('Category Index') }}</h3>
 
-            @if(Auth::user())
+            @if(auth()->user())
                 <a class="btn btn-secondary" href="{{ route('category.create') }}">{{ __('Create') }}</a>
             @endif
         </div>

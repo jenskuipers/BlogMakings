@@ -38,7 +38,7 @@ class PostController extends Controller
     {
         $posts = $this->postRepository->getAll();
 
-        return View::make('post.index', compact('posts'));
+        return view('post.index', compact('posts'));
     }
 
     /**
@@ -51,7 +51,7 @@ class PostController extends Controller
     {
         $categories = $this->categoryRepository->getAll();
 
-        return View::make('post.create', compact('categories'));
+        return view('post.create', compact('categories'));
     }
 
     /**
@@ -77,7 +77,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return View::make('post.show', compact('post'));
+        return view('post.show', compact('post'));
     }
 
     /**
@@ -91,7 +91,7 @@ class PostController extends Controller
     {
         $categories = $this->categoryRepository->getAll();
 
-        return View::make('post.edit', compact('categories', 'post'));
+        return view('post.edit', compact('categories', 'post'));
     }
 
     /**
