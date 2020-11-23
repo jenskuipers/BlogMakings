@@ -23,9 +23,9 @@
     <div class="card-body">
         <table class="table">
             <thead>
-                <th class="col-md-6">@sortablelink('title', __('Title'))</th>
+                <th class="col-md-6">@sortablelink('title', __('Title'),)</th>
                 <th class="col-md-3">@sortablelink('user.name', __('Author'))</th>
-                <th class="col-md-3">@sortablelink('created_at', __('Created at'))</th>
+                <th class="col-md-3">@sortablelink('created_at', __('Created at'), 'desc')</th>
             </thead>
 
             @foreach($posts as $post)

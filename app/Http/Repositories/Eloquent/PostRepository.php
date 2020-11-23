@@ -8,7 +8,6 @@ use App\Models\Post;
 use App\Repositories\PostRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Facades\Auth;
 
 class PostRepository implements PostRepositoryInterface
 {
@@ -35,7 +34,7 @@ class PostRepository implements PostRepositoryInterface
      */
     public function getAll(): LengthAwarePaginator
     {
-        return Post::sortable(['updated_at' => 'desc'])
+        return Post::sortable(['title' => 'desc'])
             ->paginate(12);
     }
 
@@ -47,7 +46,7 @@ class PostRepository implements PostRepositoryInterface
      */
     public function getAllByCategoryId($categoryId): LengthAwarePaginator
     {
-        return Post::sortable(['updated_at' => 'desc'])
+        return Post::sortable(['title' => 'desc'])
             ->where('category_id', '=', $categoryId)
             ->paginate(12);
     }
@@ -60,7 +59,7 @@ class PostRepository implements PostRepositoryInterface
      */
     public function getAllByUserId($userId): LengthAwarePaginator
     {
-        return Post::sortable(['updated_at' => 'desc'])
+        return Post::sortable(['title' => 'desc'])
             ->whereUserId($userId)
             ->paginate(12);
     }
@@ -74,7 +73,7 @@ class PostRepository implements PostRepositoryInterface
     public function create(StorePostRequest $request): Post
     {
         $data = $request->validated();
-        $data['user_id'] = Auth::id();
+        $data['user_id'] = auth()->id();
         
         return Post::create($data);
     }

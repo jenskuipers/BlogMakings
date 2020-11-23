@@ -8,7 +8,6 @@ use App\Models\Comment;
 use App\Repositories\CommentRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Illuminate\Support\Facades\Auth;
 
 class CommentRepository implements CommentRepositoryInterface
 {
@@ -34,7 +33,7 @@ class CommentRepository implements CommentRepositoryInterface
     public function create(StoreCommentRequest $request): Comment
     {
         $data = $request->validated();
-        $data['user_id'] = Auth::id();
+        $data['user_id'] = auth()->id();
         
         return Comment::create($data);
     }
