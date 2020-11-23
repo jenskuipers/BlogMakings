@@ -34,7 +34,7 @@ class CategoryController extends Controller
     {
         $categories = $this->categoryRepository->getAll();
 
-        return View::make('category.index', compact('categories'));
+        return view('category.index', compact('categories'));
     }
 
     /**
@@ -44,7 +44,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        return View::make('category.create');
+        return view('category.create');
     }
 
     /**
@@ -74,7 +74,7 @@ class CategoryController extends Controller
     {
         $posts = $this->categoryRepository->getPostsByCategory($category);
 
-        return View::make('category.show', compact('category', 'posts'));
+        return view('category.show', compact('category', 'posts'));
     }
 
     /**
@@ -85,7 +85,7 @@ class CategoryController extends Controller
      */
     public function edit(Category $category)
     {
-        return View::make('category.edit', compact('category'));
+        return view('category.edit', compact('category'));
     }
 
     /**

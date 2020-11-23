@@ -41,7 +41,7 @@
                             <a class="nav-link" href="{{ route('post.index') }}">{{ __('Posts') }}</a>
                         </li>
                     
-                        @if (Auth::user() && Auth::user()->role == 'admin')
+                        @if (auth()->user() && auth()->user()->role == 'admin')
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('user.index') }}">{{ __('Users') }}</a>
                         </li>
@@ -65,7 +65,7 @@
                         @else
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
+                                    {{ auth()->user()->name }}
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">

@@ -3,9 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
-use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class CheckRole
 {
@@ -19,7 +17,7 @@ class CheckRole
      */
     public function handle(Request $request, Closure $next, string $role)
     {
-        if (Auth::user()->role == $role || Auth::user()->role == 'admin') {
+        if (auth()->user()->role == $role || auth()->user()->role == 'admin') {
             return $next($request);
         } else {
             return abort(401);
