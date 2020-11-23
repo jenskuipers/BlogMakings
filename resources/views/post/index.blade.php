@@ -15,7 +15,7 @@
     <div class="card-body">
         <table class="table">
             <thead>
-                <th class="col-md-4">@sortablelink('title', __('Title'))</th>
+                <th class="col-md-4">@sortablelink('title', __('Title'), 'asc')</th>
                 <th class="col-md-2">@sortablelink('user.name', __('Author'))</th>
                 <th class="col-md-3">@sortablelink('created_at', __('Created at'))</th>
                 <th class="col-md-3">@sortablelink('category.name', __('Category'))</th>
