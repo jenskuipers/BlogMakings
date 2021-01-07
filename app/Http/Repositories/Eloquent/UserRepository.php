@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Http\Repositories\Eloquent;
 
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
-use App\Repositories\UserRepositoryInterface;
+use App\Http\Repositories\UserRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Facades\Hash;

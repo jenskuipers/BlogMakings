@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Http\Repositories\Eloquent;
 
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
 use App\Models\Comment;
-use App\Repositories\CommentRepositoryInterface;
+use App\Http\Repositories\CommentRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 

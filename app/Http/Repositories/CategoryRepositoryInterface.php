@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Http\Repositories;
 
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;

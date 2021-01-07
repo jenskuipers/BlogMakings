@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Http\Repositories\Eloquent;
 
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
-use App\Repositories\CategoryRepositoryInterface;
+use App\Http\Repositories\CategoryRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 
