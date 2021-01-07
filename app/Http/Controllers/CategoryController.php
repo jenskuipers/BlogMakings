@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCategoryRequest;
 use App\Http\Requests\UpdateCategoryRequest;
 use App\Models\Category;
-use App\Repositories\Eloquent\CategoryRepository;
+use App\Http\Repositories\Eloquent\CategoryRepository;
 use Illuminate\Support\Facades\View;
 
 class CategoryController extends Controller
@@ -18,7 +18,7 @@ class CategoryController extends Controller
     /**
      * Instantiate the category repository.
      * 
-     * @param \App\Repositories\Eloquent\CategoryRepository $categoryRepository
+     * @param CategoryRepository $categoryRepository
      */
     public function __construct(CategoryRepository $categoryRepository) {
         $this->categoryRepository = $categoryRepository;

@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Repositories\Eloquent;
+namespace App\Http\Repositories\Eloquent;
 
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use App\Models\Post;
-use App\Repositories\PostRepositoryInterface;
+use App\Http\Repositories\PostRepositoryInterface;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 

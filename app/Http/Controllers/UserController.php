@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreUserRequest;
 use App\Http\Requests\UpdateUserRequest;
 use App\Models\User;
-use App\Repositories\Eloquent\UserRepository;
+use App\Http\Repositories\Eloquent\UserRepository;
 use Illuminate\Support\Facades\View;
 
 class UserController extends Controller
@@ -18,7 +18,7 @@ class UserController extends Controller
     /**
      * Instantiate the user repository.
      * 
-     * @param \App\Repositories\Eloquent\UserRepository $userRepository
+     * @param UserRepository $userRepository
      */
     public function __construct(UserRepository $userRepository) {
         $this->userRepository = $userRepository;

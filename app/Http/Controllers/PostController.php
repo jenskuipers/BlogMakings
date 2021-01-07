@@ -6,22 +6,23 @@ use App\Models\Post;
 use Illuminate\Support\Facades\View;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
-use App\Repositories\Eloquent\CategoryRepository;
-use App\Repositories\Eloquent\PostRepository;
+use App\Http\Repositories\Eloquent\CategoryRepository;
+use App\Http\Repositories\Eloquent\PostRepository;
 
 class PostController extends Controller
 {
     /**
-     * @var \App\Repositories\Eloquent\PostRepository       $postRepository
-     * @var \App\Repositories\Eloquent\CategoryRepository   $categoryRepository
+     * @var PostRepository       $postRepository
+     * @var PostRepository       $postRepository
+     * @var CategoryRepository   $categoryRepository
      */
     protected $postRepository, $categoryRepository;
 
     /**
      * Instantiate the post and category repositories.
      *
-     * @param \App\Repositories\Eloquent\PostRepository     $postRepository
-     * @param \App\Repositories\Eloquent\CategoryRepository $categoryRepository
+     * @param PostRepository     $postRepository
+     * @param CategoryRepository $categoryRepository
      */
     public function __construct(CategoryRepository $categoryRepository, PostRepository $postRepository) {
         $this->postRepository = $postRepository;

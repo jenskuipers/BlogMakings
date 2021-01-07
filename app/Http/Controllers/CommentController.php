@@ -5,19 +5,19 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use App\Http\Requests\StoreCommentRequest;
 use App\Http\Requests\UpdateCommentRequest;
-use App\Repositories\Eloquent\CommentRepository;
+use App\Http\Repositories\Eloquent\CommentRepository;
 
 class CommentController extends Controller
 {
     /**
-     * @var \App\Repositories\Eloquent\CommentRepository $commentRepository
+     * @var CommentRepository $commentRepository
      */
     protected $commentRepository;
 
     /**
      * Instantiate the comment repository.
      *
-     * @param \App\Repositories\Eloquent\CommentRepository $commentRepository
+     * @param CommentRepository $commentRepository
      */
     public function __construct(CommentRepository $commentRepository) {
         $this->commentRepository = $commentRepository;
